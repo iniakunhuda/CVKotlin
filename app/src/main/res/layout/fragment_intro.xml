@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".IntroFragment">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="@color/white"
+            android:src="@android:drawable/ic_input_add"
+            android:layout_margin="50px"
+            android:backgroundTint="@color/design_default_color_primary"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            />
+
+        <TextView
+            android:id="@+id/txtTerbaru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terbaru"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textFontWeight="800"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_below="@id/txtTerbaru"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="right|center"
+                    android:layoutDirection="rtl"
+                    android:padding="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/itemCard"
+                    android:layout_margin="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                        <TextView
+                            android:layout_margin="15dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Beli Minyak Goreng 1 Liter"
+                            />
+
+                </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+</RelativeLayout>
+</layout>
