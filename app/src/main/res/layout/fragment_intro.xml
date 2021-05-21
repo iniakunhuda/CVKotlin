@@ -40,29 +40,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-                <CheckBox
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="15dp"
-                    android:gravity="right|center"
-                    android:layoutDirection="rtl"
-                    android:padding="0dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/itemCard"
-                    android:layout_margin="15dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
-
-                        <TextView
-                            android:layout_margin="15dp"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:text="Beli Minyak Goreng 1 Liter"
-                            />
-
-                </com.google.android.material.card.MaterialCardView>
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:footerDividersEnabled="false" />
 
         </LinearLayout>
 

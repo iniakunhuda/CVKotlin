@@ -1,14 +1,21 @@
 package com.miftahulhuda.todolistapp
 
 import android.app.AppComponentFactory
+import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.ListAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.miftahulhuda.todolistapp.databinding.FragmentIntroBinding
 
 class IntroFragment : Fragment() {
@@ -17,9 +24,6 @@ class IntroFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_intro, container, false)
-
         (activity as AppCompatActivity).supportActionBar?.title = "TodoListApp"
 
         val binding: FragmentIntroBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_intro, container, false)
@@ -27,10 +31,26 @@ class IntroFragment : Fragment() {
             Navigation.createNavigateOnClickListener(R.id.action_introFragment_to_addTodoFragment)
         )
 
-        binding.itemCard.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_introFragment_to_detailTodoFragment)
-        )
+        val items = listOf("Beli Minyak Goreng 1 Liter", "Beli Gula 1 kg", "Beli Jajan")
+        val desc = listOf("Beli Minyak Goreng 1 Liter Deskripsi", "Beli Gula 1 kg Deskripsi", "Beli Jajan Deskripsi")
+
+        val adapter = activity?.let {
+            ArrayAdapter<String>(
+                it,
+                R.layout.activity_listview,
+                R.id.txtItem,
+                items
+            )
+        }
+
+        binding.listView.isClickable = true
+        binding.listView.adapter = adapter
+        binding.listView.setOnItemClickListener { parent, view, position, id ->
+            val element = position // The item that was clicked
+            view.findNavController().navigate(R.id.detailTodoFragment)
+        }
 
         return binding.root
     }
+
 }
