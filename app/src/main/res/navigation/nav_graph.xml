@@ -25,5 +25,12 @@
     <fragment
         android:id="@+id/detailTodoFragment"
         android:name="com.miftahulhuda.todolistapp.DetailTodoFragment"
-        android:label="DetailTodoFragment" />
+        android:label="DetailTodoFragment">
+        <argument
+            android:name="judul"
+            app:argType="string" />
+        <argument
+            android:name="ket"
+            app:argType="string" />
+    </fragment>
 </navigation>

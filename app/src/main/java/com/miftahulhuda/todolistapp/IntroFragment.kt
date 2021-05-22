@@ -47,7 +47,9 @@ class IntroFragment : Fragment() {
         binding.listView.adapter = adapter
         binding.listView.setOnItemClickListener { parent, view, position, id ->
             val element = position // The item that was clicked
-            view.findNavController().navigate(R.id.detailTodoFragment)
+            val judul = items[position]
+            val ket = desc[position]
+            view.findNavController().navigate(IntroFragmentDirections.actionIntroFragmentToDetailTodoFragment(judul, ket))
         }
 
         return binding.root

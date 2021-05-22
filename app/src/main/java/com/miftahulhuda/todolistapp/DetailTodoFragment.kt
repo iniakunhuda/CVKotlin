@@ -16,11 +16,15 @@ class DetailTodoFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
         (activity as AppCompatActivity).supportActionBar?.title = "TodoListApp"
 
-
         val binding: FragmentDetailTodoBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail_todo, container, false)
+        arguments?.let {
+            val args = DetailTodoFragmentArgs.fromBundle(it)
+            binding.txtJudul.text = args.judul
+            binding.txtKeterangan.text = args.ket
+        }
+
         return binding.root
     }
 }
