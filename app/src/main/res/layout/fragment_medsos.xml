@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".MedsosFragment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardFb"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/logoFb"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/fb"
+                    />
+                <TextView
+                    android:layout_margin="15dp"
+                    android:gravity="left"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@id/logoFb"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="Facebook"
+                    />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardTwitter"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/logoTwitter"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/pict"
+                    />
+                <TextView
+                    android:layout_margin="15dp"
+                    android:gravity="left"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@id/logoTwitter"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Twitter"
+                    />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardIg"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/logoIg"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/pict"
+                    />
+                <TextView
+                    android:layout_margin="15dp"
+                    android:gravity="left"
+                    android:textSize="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_toRightOf="@id/logoIg"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Instagram"
+                    />
+            </RelativeLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</layout>

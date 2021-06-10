@@ -11,26 +11,18 @@
         android:label="fragment_intro"
         tools:layout="@layout/fragment_intro" >
         <action
-            android:id="@+id/action_introFragment_to_addTodoFragment"
-            app:destination="@id/addTodoFragment" />
+            android:id="@+id/action_introFragment_to_medsosFragment"
+            app:destination="@id/medsosFragment" />
         <action
-            android:id="@+id/action_introFragment_to_detailTodoFragment"
-            app:destination="@id/detailTodoFragment" />
+            android:id="@+id/action_introFragment_to_riwayatFragment"
+            app:destination="@id/riwayatFragment" />
     </fragment>
     <fragment
-        android:id="@+id/addTodoFragment"
-        android:name="com.miftahulhuda.todolistapp.AddTodoFragment"
-        android:label="fragment_add_todo"
-        tools:layout="@layout/fragment_add_todo" />
+        android:id="@+id/medsosFragment"
+        android:name="com.miftahulhuda.todolistapp.MedsosFragment"
+        android:label="MedsosFragment" />
     <fragment
-        android:id="@+id/detailTodoFragment"
-        android:name="com.miftahulhuda.todolistapp.DetailTodoFragment"
-        android:label="DetailTodoFragment">
-        <argument
-            android:name="judul"
-            app:argType="string" />
-        <argument
-            android:name="ket"
-            app:argType="string" />
-    </fragment>
+        android:id="@+id/riwayatFragment"
+        android:name="com.miftahulhuda.todolistapp.RiwayatFragment"
+        android:label="RiwayatFragment" />
 </navigation>

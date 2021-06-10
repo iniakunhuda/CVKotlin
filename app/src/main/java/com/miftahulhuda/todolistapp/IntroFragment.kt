@@ -24,33 +24,18 @@ class IntroFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        (activity as AppCompatActivity).supportActionBar?.title = "TodoListApp"
+        (activity as AppCompatActivity).supportActionBar?.title = "CV Saya"
 
         val binding: FragmentIntroBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_intro, container, false)
-        binding.fabAdd.setOnClickListener (
-            Navigation.createNavigateOnClickListener(R.id.action_introFragment_to_addTodoFragment)
-        )
 
-        val items = listOf("Beli Minyak Goreng 1 Liter", "Beli Gula 1 kg", "Beli Jajan")
-        val desc = listOf("Beli Minyak Goreng 1 Liter Deskripsi", "Beli Gula 1 kg Deskripsi", "Beli Jajan Deskripsi")
-
-        val adapter = activity?.let {
-            ArrayAdapter<String>(
-                it,
-                R.layout.activity_listview,
-                R.id.txtItem,
-                items
-            )
+        binding.btnMedsos.setOnClickListener { view ->
+            view.findNavController().navigate(IntroFragmentDirections.actionIntroFragmentToMedsosFragment())
         }
 
-        binding.listView.isClickable = true
-        binding.listView.adapter = adapter
-        binding.listView.setOnItemClickListener { parent, view, position, id ->
-            val element = position // The item that was clicked
-            val judul = items[position]
-            val ket = desc[position]
-            view.findNavController().navigate(IntroFragmentDirections.actionIntroFragmentToDetailTodoFragment(judul, ket))
+        binding.btnRiwayat.setOnClickListener { view ->
+            view.findNavController().navigate(IntroFragmentDirections.actionIntroFragmentToRiwayatFragment())
         }
+
 
         return binding.root
     }
