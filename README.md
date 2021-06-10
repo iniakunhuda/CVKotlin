@@ -1,5 +1,5 @@
 ## Learn Kotlin
 
-Make simple todo list app
+Make simple CV app with kotlin
 
-![App](cover-new.png)
+![App](cover.png)
